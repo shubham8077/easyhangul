@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+::selection {
+    user-select: none;
+}
+
+:root {
+    --bg: #FFF5E1;
+    --sndy: #00d9ff;
+    --peach: #FF6969;
+    --lpeach: #ffa1a1;
+    --maroon: #C80036;
+    --navy: #0C1844;
+    --lnavy: #3e59b0;
+}

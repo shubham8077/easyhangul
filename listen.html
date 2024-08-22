@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyHangul</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css">
+    <script src="tailwind.js"></script>
+    <script>
+        function playAudio(audioId) {
+            const audioElement = document.getElementById(audioId);
+            audioElement.play();
+        }
+
+        function playAudioBySrc(src) {
+            const audioElement = document.getElementById('dynamicAudio');
+            audioElement.src = src;
+            audioElement.play();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-audio]').forEach(el => {
+                el.addEventListener('click', () => {
+                    playAudioBySrc(el.getAttribute('data-audio'));
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-gradient-to-r from-[--peach] to-[--maroon]">
+    <audio id="dynamicAudio"></audio>
+    <header class="bg-gradient-to-t from-[--navy] to-[--lnavy] w-full font-bold">
+        <nav>
+            <ul class=" w-full flex p-[1vw] justify-evenly">
+                <div class="flex">
+                    <span class="hover:text-[--peach] flex items-center transition-all mr-[1vw] text-white"><a
+                            href="index.html"><img src="assets/img/title.png" alt="logo" width="200vw"></a>
+                    </span>
+                </div>
+
+                <div class="w-full flex justify-evenly items-center">
+                    <a href="learn.html">
+                        <li
+                            class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                            Learn</li>
+                    </a>
+                    <a href="listen.html">
+                        <li
+                            class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                            Listen</li>
+                    </a>
+                    <a href="know_more.html">
+                        <li
+                            class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                            Know
+                            More</li>
+                    </a>
+                    <a href="about.html">
+                        <li class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                            About</li>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <p class="text-[5vw] font-bold text-[--navy] m-[2vw]">Vowels</p>
+    <div class="flex flex-wrap">
+
+        <p data-audio="assets/audio/vowels/aa.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅏ</p>
+        <p data-audio="assets/audio/vowels/ya.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅑ</p>
+        <p data-audio="assets/audio/vowels/eo.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅓ</p>
+        <p data-audio="assets/audio/vowels/yeo.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅕ</p>
+        <p data-audio="assets/audio/vowels/o.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅗ</p>
+        <p data-audio="assets/audio/vowels/yo.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅛ</p>
+        <p data-audio="assets/audio/vowels/u.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅜ</p>
+        <p data-audio="assets/audio/vowels/yu.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅠ</p>
+        <p data-audio="assets/audio/vowels/eu.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅡ</p>
+        <p data-audio="assets/audio/vowels/i.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅣ</p>
+        <p data-audio="assets/audio/vowels/ae.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅐ</p>
+        <p data-audio="assets/audio/vowels/yae.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅒ</p>
+        <p data-audio="assets/audio/vowels/e.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅔ</p>
+        <p data-audio="assets/audio/vowels/ye.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅖ</p>
+    </div>
+
+    <p class="text-[5vw] font-bold text-[--navy] m-[2vw]">Double Vowels</p>
+
+    <div class="flex flex-wrap">
+        <p data-audio="assets/audio/doublev/wa.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅘ</p>
+        <p data-audio="assets/audio/doublev/wo.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅝ</p>
+        <p data-audio="assets/audio/doublev/wae.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅙ</p>
+        <p data-audio="assets/audio/doublev/we.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅞ</p>
+        <p data-audio="assets/audio/doublev/oe.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅚ</p>
+        <p data-audio="assets/audio/doublev/wi.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅟ</p>
+        <p data-audio="assets/audio/doublev/ui.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅢ</p>
+    </div>
+
+    <p class="text-[5vw] font-bold text-[--navy] m-[2vw]">Plain Consonants</p>
+
+    <div class="flex flex-wrap">
+        <p data-audio="assets/audio/pconsonants/g.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㄱ</p>
+        <p data-audio="assets/audio/pconsonants/d.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㄷ</p>
+        <p data-audio="assets/audio/pconsonants/j.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅈ</p>
+        <p data-audio="assets/audio/pconsonants/b.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅂ</p>
+        <p data-audio="assets/audio/pconsonants/ng.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅇ</p>
+        <p data-audio="assets/audio/pconsonants/n.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㄴ</p>
+        <p data-audio="assets/audio/pconsonants/s.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅅ</p>
+        <p data-audio="assets/audio/pconsonants/m.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅁ</p>
+        <p data-audio="assets/audio/pconsonants/h.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅎ</p>
+        <p data-audio="assets/audio/pconsonants/r.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㄹ</p>
+
+    </div>
+
+    <p class="text-[5vw] font-bold text-[--navy] m-[2vw]">Aspirated Consonants</p>
+
+    <div class="flex flex-wrap">
+        <p data-audio="assets/audio/aconsonants/k.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅋ</p>
+        <p data-audio="assets/audio/aconsonants/t.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅌ</p>
+        <p data-audio="assets/audio/aconsonants/ch.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅊ</p>
+        <p data-audio="assets/audio/aconsonants/p.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅍ</p>
+
+    </div>
+
+    <p class="text-[5vw] font-bold text-[--navy] m-[2vw]">Tense Consonants</p>
+
+    <div class="flex flex-wrap">
+        <p data-audio="assets/audio/tconsonants/kk.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㄲ</p>
+        <p data-audio="assets/audio/tconsonants/tt.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㄸ</p>
+        <p data-audio="assets/audio/tconsonants/jj.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅉ</p>
+        <p data-audio="assets/audio/tconsonants/pp.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅃ</p>
+        <p data-audio="assets/audio/tconsonants/ss.mp3"
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl hover:bg-slate-500 transition-all">
+            ㅆ</p>
+
+    </div>
+
+    <footer
+        class="bg-gradient-to-r from-[--navy] to-[--lnavy] text-white font-bold text-center p-[1vw] relative bottom-0 w-full text-[4vw] lg:text-[2vw]">
+        Made with love💝
+    </footer>
+</body>
+
+</html>
