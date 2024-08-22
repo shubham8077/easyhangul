@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyHangul</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../tailwind.js"></script>
+    <script>
+        function playAudio(audioId) {
+            const audioElement = document.getElementById(audioId);
+            audioElement.play();
+        }
+
+        function playAudioBySrc(src) {
+            const audioElement = document.getElementById('dynamicAudio');
+            audioElement.src = src;
+            audioElement.play();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-audio]').forEach(el => {
+                el.addEventListener('click', () => {
+                    playAudioBySrc(el.getAttribute('data-audio'));
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-gradient-to-r from-[--peach] to-[--maroon]">
+    <audio id="dynamicAudio"></audio>
+    <header class="bg-gradient-to-t from-[--navy] to-[--lnavy] w-full font-bold">
+        <nav>
+            <ul class=" w-full flex p-[1vw] justify-evenly">
+                <div class="flex">
+                    <span class="hover:text-[--peach] flex items-center transition-all mr-[1vw] text-white"><a
+                            href="../index.html"><img src="../assets/img/title.png" alt="logo" width="200vw"></a>
+                    </span>
+                </div>
+
+                <div class="w-full flex justify-evenly items-center">
+                    <a href="../learn.html">
+                        <li
+                            class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                            Learn</li>
+                    </a>
+                    <a href="../listen.html">
+                        <li
+                            class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                            Listen</li>
+                    </a>
+                    <a href="../know_more.html">
+                        <li
+                            class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                            Know
+                            More</li>
+                    </a>
+                <a href="../about.html">
+                    <li class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                        About</li>
+                </a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <p
+        class="text-center border-4 border-double text-[5vw] font-bold text-[--navy] m-[2vw] rounded-3xl bg-gradient-to-b from-[--sndy] to-[--lnavy] drop-shadow-2xl">
+        Vowels</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅏ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/aa.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            아</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Aa</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                आ</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in f<u>a</u>ther</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅑ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/ya.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            야</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Ya</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                या</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in <u>Ya</u>rd</p>
+    <hr>
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅓ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/eo.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            어</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Eo</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                औ</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in M<u>eo</u>w</p>
+    <hr>
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅕ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/yeo.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            여</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Yeo</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                यौ</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in <u>Yo</u>nder</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅗ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/o.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            오</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                O</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                ओ</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in H<u>o</u>me</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅛ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/yo.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            요</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Yo</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                यो</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in <u>Yo</u>ga</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅜ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/u.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            우</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                U</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                उ</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in P<u>u</u>ll</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅠ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/yu.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            유</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Yu</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                यु</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in <u>You</u></p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅡ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/eu.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            으</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Eu</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                ऊ</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in L<u>oo</u>k</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅣ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/i.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            이</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                I</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                इ</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in <u>I</u>llusion</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅐ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/ae.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            애</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Ae</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                ऐ</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in C<u>a</u>re</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅒ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/yae.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            얘</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Yae</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                यै</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in <u>Ya</u>nkie</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅔ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/e.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            에</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                E</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                ए</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in M<u>e</u>t</p>
+    <hr>
+
+
+    <div class="flex">
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅇ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            +</p>
+        <p
+            class="bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅖ</p>
+        <p
+            class=" w-[16vw] h-[14vw] flex justify-center items-center my-[1vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            =</p>
+        <p data-audio="../assets/audio/vowels/ye.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[16vw] h-[14vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            예</p>
+        <div>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Ye</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                ये</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in <u>Ye</u>s</p>
+    <hr>
+
+
+    </div>
+
+    <div class="flex justify-center m-[8vw] lg:m-0">
+        <a href="../learn.html">
+            <button
+                class="border-2 border-white bg-[--navy] font-bold text-center block p-[2vw] md:p-[1vw] rounded-2xl transition-all m-[2vw] text-white hover:bg-gradient-to-r from-[--lnavy] to-[--sndy]">
+                Back</button>
+        </a>
+    </div>
+
+    <footer
+        class="bg-gradient-to-r from-[--navy] to-[--lnavy] text-white font-bold text-center p-[1vw] relative bottom-0 w-full text-[4vw] lg:text-[2vw]">
+        Made with love💝
+    </footer>
+</body>
+
+</html>

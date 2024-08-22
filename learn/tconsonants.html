@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyHangul</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../tailwind.js"></script>
+    <script>
+        function playAudio(audioId) {
+            const audioElement = document.getElementById(audioId);
+            audioElement.play();
+        }
+
+        function playAudioBySrc(src) {
+            const audioElement = document.getElementById('dynamicAudio');
+            audioElement.src = src;
+            audioElement.play();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-audio]').forEach(el => {
+                el.addEventListener('click', () => {
+                    playAudioBySrc(el.getAttribute('data-audio'));
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-gradient-to-r from-[--peach] to-[--maroon]">
+    <audio id="dynamicAudio"></audio>
+    <header class="bg-gradient-to-t from-[--navy] to-[--lnavy] w-full font-bold">
+        <nav>
+            <ul class=" w-full flex p-[1vw] justify-evenly">
+                <div class="flex">
+                    <span class="hover:text-[--peach] flex items-center transition-all mr-[1vw] text-white"><a
+                            href="../index.html"><img src="../assets/img/title.png" alt="logo" width="200vw"></a>
+                    </span>
+                </div>
+
+                <div class="w-full flex justify-evenly items-center">
+                    <a href="../learn.html">
+                        <li
+                            class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                            Learn</li>
+                    </a>
+                    <a href="../listen.html">
+                        <li
+                            class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                            Listen</li>
+                    </a>
+                    <a href="../know_more.html">
+                        <li
+                            class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                            Know
+                            More</li>
+                    </a>
+                <a href="../about.html">
+                    <li class="text-[3.5vw] md:text-[2vw] hover:text-[--sndy] hover:underline transition-all text-white">
+                        About</li>
+                </a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <p
+        class="text-center border-4 border-double text-[5vw] font-bold text-[--navy] m-[2vw] rounded-3xl bg-gradient-to-b from-[--sndy] to-[--lnavy] drop-shadow-2xl">
+        Tense Consonants</p>
+    <hr>
+
+
+    <div class="flex">
+        <p data-audio="../assets/audio/tconsonants/kk.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[34vw] h-[34vw] md:w-[18vw] md:h-[18vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㄲ</p>
+
+         <div class="flex-col my-auto">
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Kk</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                क्क</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in S<u>ki</u>ll</p>
+    <hr>
+
+
+    <div class="flex">
+        <p data-audio="../assets/audio/tconsonants/tt.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[34vw] h-[34vw] md:w-[18vw] md:h-[18vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㄸ</p>
+
+         <div class="flex-col my-auto">
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Tt </p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                ट्ट</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in S<u>t</u>eam</p>
+    <hr>
+
+    <div class="flex">
+        <p data-audio="../assets/audio/tconsonants/jj.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[34vw] h-[34vw] md:w-[18vw] md:h-[18vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅉ</p>
+
+         <div class="flex-col my-auto">
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Jj</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                ज्ज</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in Ga<u>dg</u>et</p>
+    <hr>
+
+    <div class="flex">
+        <p data-audio="../assets/audio/tconsonants/pp.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[34vw] h-[34vw] md:w-[18vw] md:h-[18vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅃ</p>
+
+         <div class="flex-col my-auto">
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Pp</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                प्प</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in S<u>p</u>eak</p>
+    <hr>
+
+
+    <div class="flex">
+        <p data-audio="../assets/audio/tconsonants/ss.mp3"
+            class="border-2 border-[--sndy] hover:bg-slate-400 transirion-all bg-[--bg] w-[34vw] h-[34vw] md:w-[18vw] md:h-[18vw] flex justify-center items-center m-[2vw] text-center font-extrabold text-[5vw] p-[2vw] drop-shadow-2xl rounded-2xl">
+            ㅆ</p>
+
+         <div class="flex-col my-auto">
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                Ss</p>
+            <p
+                class="bg-[--bg] w-[12vw] h-[8vw] flex justify-center items-center m-[2vw] text-center font-semibold text-[4vw] drop-shadow-2xl rounded-md">
+                स्स</p>
+        </div>
+    </div>
+    <p class="text-[4vw] md:text-[3vw] font-bold m-[2vw] text-white">As in <u>S</u>ea</p>
+    <hr>
+
+    </div>
+
+
+    <div class="flex justify-center m-[8vw] md:m-0">
+        <a href="../learn.html">
+            <button
+                class="border-2 border-white bg-[--navy] font-bold text-center block p-[2vw] md:p-[1vw] rounded-2xl transition-all m-[2vw] text-white hover:bg-gradient-to-r from-[--lnavy] to-[--sndy]">
+                Back</button>
+        </a>
+    </div>
+
+<footer
+    class="bg-gradient-to-r from-[--navy] to-[--lnavy] text-white font-bold text-center p-[1vw] relative bottom-0 w-full text-[4vw] lg:text-[2vw]">
+    Made with love💝
+</footer>
+</body>
+
+</html>
